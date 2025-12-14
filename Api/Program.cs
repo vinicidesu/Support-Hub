@@ -1,3 +1,6 @@
+using Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDbContext<SupportHubDbContext>(opt =>
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
 
 var app = builder.Build();
 

@@ -2,8 +2,8 @@ services:
     db:
         image: postgres:16
         environment:
-            POSTGRES_USER: user
-            POSTGRES_PASSWORD: password
-            POSTGRES_DB: mydatabase
+            POSTGRES_USER: supporthub
+            POSTGRES_PASSWORD: supporthub
+            POSTGRES_DB: supporthub
         volumes:
             - db_data:/var/lib/postgresql/data
