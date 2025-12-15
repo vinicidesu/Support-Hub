@@ -21,7 +21,7 @@ namespace Infrastructure.Persistence.Configuration
             builder.Property(t => t.CreatedAt)
                 .IsRequired();
             builder.Property(t => t.UpdatedAt)
-                .IsRequired(false);
+                .IsRequired();
         }
     }
 }
